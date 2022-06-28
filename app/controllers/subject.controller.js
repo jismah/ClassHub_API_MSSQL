@@ -2,7 +2,7 @@ const db = require("../models");
 const Subject = db.subjects;
 const Op = db.Sequelize.Op;
 
-// CREANDO U GUARDANDO NUEVA MATERIA
+// CREANDO Y GUARDANDO NUEVA MATERIA
 exports.create = (req, res) => {
     // VALIDANDO REQUEST
     if (!req.body.name){
@@ -30,7 +30,7 @@ exports.create = (req, res) => {
     });
 };
 
-// RECUPERANDO TODAS LA MATERIAS DE LA DB 
+// LISTAR TODAS LA MATERIAS DE LA DB 
 
 exports.findAll = (req, res) => {
     const name = req.query.name;
